@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3742fa"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/question_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:text="@string/question_1"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="28dp" />
+
+    <LinearLayout
+        android:layout_above="@id/score_textView"
+        android:gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_true"
+            android:textColor="#ffffff"
+            android:background="#26de81"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="50dp"
+            android:text="True"/>
+
+        <Button
+            android:id="@+id/btn_false"
+            android:background="#fc5c65"
+            android:textColor="#ffffff"
+            android:paddingHorizontal="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="False"/>
+
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/score_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:textColor="#ffffff"
+        android:layout_above="@id/question_progressBar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:text="Score:"/>
+
+    <ProgressBar
+        android:id="@+id/question_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"/>
+
+</RelativeLayout>
