@@ -3,11 +3,49 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
     android:background="#3742fa"
     android:padding="16dp"
     tools:context=".MainActivity">
+
+    <!--Result page-->
+    <ImageView
+        android:id="@+id/result_imgview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/trophy"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/result_textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/result_imgview"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_retry"
+        android:textColor="#ffffff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/result_textView"
+        android:layout_marginTop="40dp"
+        android:text="Again"
+        android:background="#fbc531"
+        android:visibility="gone"/>
+
+    <!--Result page-->
 
     <TextView
         android:id="@+id/question_textView"
@@ -18,12 +56,13 @@
         android:text="@string/question_1"
         android:textAlignment="center"
         android:textColor="#ffffff"
-        android:textSize="28dp" />
+        android:textSize="28dp"/>
 
     <LinearLayout
         android:layout_above="@id/score_textView"
+        android:id="@+id/btn_linearLayout"
         android:gravity="center"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -59,7 +98,7 @@
         android:layout_above="@id/question_progressBar"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="20dp"
-        android:text="Score:"/>
+        android:text="Score: 0/13"/>
 
     <ProgressBar
         android:id="@+id/question_progressBar"
